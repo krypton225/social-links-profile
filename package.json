@@ -1,0 +1,39 @@
+{
+    "name": "social-links-profile-main",
+    "version": "1.0.0",
+    "description": "This is just a training in Front End Mentor website.",
+    "main": "index.js",
+    "scripts": {
+        "dev": "concurrently --prefix-colors=\"magenta,cyan,yellow\" \"npm run postcss:watch\" \"npm run pug-js\" \"npm run server\"",
+        "postcss:watch": "postcss src/styles/style.css --dir public --use autoprefixer --watch",
+        "server": "live-server --open=./index.html",
+        "pug-js": "pug ./src/pug-js/index.pug --out ./ --watch --pretty",
+        "tags": "git push repo --tags",
+        "gen:lock": "npm i --package-lock-only"
+    },
+    "browserslist": [
+        "defaults"
+    ],
+    "keywords": [
+        "HTML",
+        "CSS",
+        "PostCSS",
+        "Challenge"
+    ],
+    "author": "Khaled Mohamed",
+    "license": "MIT",
+    "devDependencies": {
+        "autoprefixer": "^10.4.17",
+        "concurrently": "^8.2.2",
+        "live-server": "^1.2.2",
+        "postcss": "^8.4.35",
+        "postcss-cli": "^11.0.0",
+        "postcss-import": "^16.0.1",
+        "postcss-preset-env": "^9.4.0",
+        "pug": "^3.0.2",
+        "pug-cli": "^1.0.0-alpha6"
+    },
+    "dependencies": {
+        "@csstools/normalize.css": "^12.1.1"
+    }
+}
