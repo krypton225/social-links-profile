@@ -7,7 +7,8 @@ html(lang="en")
 
         +meta-desc("Just a description!")
 
-        +meta-words("HTML, CSS, JS, PugJS, Front End Challenge, Front End Mentor")
+        +meta-words("HTML, CSS, JS, PugJS, PostCSS, Front End Challenge, Front End Mentor")
+        +meta-theme("#c5f82a")
 
         link(rel="shortcut icon" href="./public/favicons/favicon.ico" type="image/x-icon")
         link(rel="manifest" href="./public/favicons/site.webmanifest")
@@ -21,4 +22,36 @@ html(lang="en")
         link(rel="stylesheet" href="./public/style.css")
 
     body
+        section(class="card" id="card")
+            div(class="card__img")
+                +space()
+                img(src="./public/images/avatar-jessica.jpeg" alt="Jessica Image")
+
+            +space()
+            div(class="card__info")
+                span(class="card__info__name") jessica randall
+
+                +space()
+                span(class="card__info__city") london, united kingdom
+
+            +space()
+            span(class="card__job") "Front-end developer and avid reader"
+
+            +space()
+
+            div(class="card__links")
+                +space()
+                a(href="https://github.com/" class="card__links__item") github
+                
+                +space()
+                a(href="https://www.frontendmentor.io/home" class="card__links__item") frontend mentor
+                
+                +space()
+                a(href="https://www.linkedin.com/" class="card__links__item") linkedin
+                
+                +space()
+                a(href="https://twitter.com/" class="card__links__item") twitter
+                
+                +space()
+                a(href="https://www.instagram.com/" class="card__links__item") instagram
         +no-script()

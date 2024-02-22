@@ -1,3 +1,11 @@
+:root {
+    --primary: hsl(75, 94%, 57%);
+    --white-color: hsl(0, 0%, 100%);
+    --grey-color: hsl(0, 0%, 20%);
+    --dark-grey: hsl(0, 0%, 12%);
+    --off-black: hsl(0, 0%, 8%);
+}
+
 /* Box sizing rules */
 *,
 *::before,
@@ -37,6 +45,7 @@ body {
     min-height: 100vh;
     text-rendering: optimizeSpeed;
     line-height: 1.5;
+    font-size: 0.875rem;
 }
 
 /* A elements that don't have a class get default styles */
@@ -106,4 +115,86 @@ select {
     font-weight: 700;
     src: url('./fonts/inter-v13-latin-700.woff2') format('woff2');
     /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--off-black);
+    display: grid;
+    place-items: center;
+}
+
+.card {
+    min-width: 22rem;
+    border-radius: 1rem;
+    padding-block: 2.25rem;
+    padding-inline: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--dark-grey);
+}
+
+.card__img {
+    --size: 4rem;
+
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+}
+
+.card__img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.card__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card__info__name {
+    color: var(--white-color);
+    text-transform: capitalize;
+    font-size: 1.35rem;
+}
+
+.card__info__city {
+    color: var(--primary);
+    font-size: 0.8rem;
+    text-transform: capitalize;
+}
+
+.card__job {
+    color: var(--white-color);
+}
+
+.card__links {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.card__links .card__links__item {
+    width: 100%;
+    padding: 0.714rem;
+    border-radius: 0.5rem;
+    display: block;
+    text-align: center;
+    background-color: var(--grey-color);
+    color: var(--white-color);
+    text-decoration: none;
+    text-transform: capitalize;
+    font-weight: 700;
+    transition: all 0.3s ease-in-out;
+}
+
+.card__links .card__links__item:hover {
+    background-color: var(--primary);
+    color: var(--dark-grey);
 }
