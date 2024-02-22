@@ -1,3 +1,11 @@
+:root {
+    --primary: hsl(75, 94%, 57%);
+    --white-color: hsl(0, 0%, 100%);
+    --grey-color: hsl(0, 0%, 20%);
+    --dark-grey: hsl(0, 0%, 12%);
+    --off-black: hsl(0, 0%, 8%);
+}
+
 /* Box sizing rules */
 *,
 *::before,
@@ -37,6 +45,7 @@ body {
     min-height: 100vh;
     text-rendering: optimizeSpeed;
     line-height: 1.5;
+    font-size: 0.875rem;
 }
 
 /* A elements that don't have a class get default styles */
